@@ -14,6 +14,7 @@ function createPlayersList(players) {
     for (key in players) {
         const li = document.createElement("li");
         li.textContent = `${key}: lvl ${players[key].level}`;
+        li.textContent = `${key}: pwr ${players[key].power}`;
         playerList.appendChild(li);
     }
 
@@ -26,7 +27,7 @@ function createPlayersList(players) {
 
 /* Add a new player and then update the list of players */
 createPlayer .addEventListener("click", evt => {
-    fetch("http://localhost:3000/create/" + name.value)
+    fetch("http://localhost:3000/create/" + name.value + "/" + power.value)
         .then(response => response.json())
         .then(() => fetch("http://localhost:3000/show/players"))
         .then(response => response.json())
