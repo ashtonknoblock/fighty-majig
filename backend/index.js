@@ -12,17 +12,14 @@ const game = {
 };
 
 /* Given a player name, add that player to the game state with an iniital level of 1 */
-app.get("/create/:player", (req, res) => {
+app.get("/create/:player/:power", (req, res) => {
     game.players[req.params.player] = {
-        level: 1
+        level: 1,
+        power: req.params.power
     };
 
-    // game.players[req.params.power] = {
-    //
-    // }
-
     // res.send will send a response to the frontend -- if you pass it a javascript object, it's translated into JSON
-    res.send({"created": req.params.player});
+    res.send({"created": req.params.player, "power": req.params.power});
 });
 
 /* Return the list of currrently created players */
