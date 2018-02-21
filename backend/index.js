@@ -17,6 +17,10 @@ app.get("/create/:player", (req, res) => {
         level: 1
     };
 
+    // game.players[req.params.power] = {
+    //
+    // }
+
     // res.send will send a response to the frontend -- if you pass it a javascript object, it's translated into JSON
     res.send({"created": req.params.player});
 });
