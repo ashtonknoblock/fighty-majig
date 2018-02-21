@@ -1,5 +1,6 @@
 // HTML elements
 const name = document.getElementById("name");
+const power = document.getElementById("power");
 const createPlayer = document.getElementById("create-player");
 const playerList = document.getElementById("player-list");
 
