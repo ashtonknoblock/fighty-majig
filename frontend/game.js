@@ -1,3 +1,5 @@
+/////ADD COMENTS 
+
 // HTML elements
 const name = document.getElementById("name");
 const power = document.getElementById("power");
@@ -23,7 +25,6 @@ function createPlayersList(players) {
 }
 
 // Event Listeners
-//CHANGES
 
 /* Add a new player and then update the list of players */
 createPlayer .addEventListener("click", evt => {
